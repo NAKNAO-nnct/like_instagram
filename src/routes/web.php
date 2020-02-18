@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// STEP 2-3
 Route::get('/user', 'UserController@index');
-
 Route::get('/user/show', 'UserController@show');
 Route::get('/user/delete/{email}', 'UserController@delete');
+
+
+// STEP 2-4
+Route::get('/bbs', 'BbsController@index');
+Route::post('/bbs', 'BbsController@create');
